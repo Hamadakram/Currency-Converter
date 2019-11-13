@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/fragment_rates"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_default">
+
+    <ImageView
+        android:id="@+id/icCurrency"
+        android:layout_width="@dimen/country_flag_dimension"
+        android:layout_height="@dimen/country_flag_dimension"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/ic_aud"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorTextDark"
+        android:textSize="@dimen/text_size_default"
+        app:layout_constraintStart_toEndOf="@+id/icCurrency"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="USD" />
+
+    <TextView
+        android:id="@+id/tvCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/colorTextLight"
+        app:layout_constraintBottom_toBottomOf="@+id/icCurrency"
+        app:layout_constraintStart_toEndOf="@+id/icCurrency"
+        tools:text="US Dollar" />
+
+    <com.test.currencyconverter.RateEditText
+        android:id="@+id/etRate"
+        android:layout_width="wrap_content"
+        android:imeOptions="actionDone"
+        android:gravity="start"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/icCurrency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icCurrency"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="1183.06" />
+</androidx.constraintlayout.widget.ConstraintLayout>
